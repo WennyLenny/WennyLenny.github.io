@@ -1,84 +1,131 @@
 * {
-    font-family: "Manrope", sans-serif;
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+@import url(https://fonts.googleapis.com/css?family=Manrope);
 
 :root {
-    --light-blue: #5984d4;
-    --blue: #33528d;
-    --white: #F3E2D2;
-    --brown: #6b4f37;
-    --dark-brown: #422c19;
-    --yellow: #b58628;
+  --light-blue: #5984d4;
+  --blue: #33528d;
+  --white: #f7eee6;
+  --grey: #a3a09e8e;
+  --brown: #6b4f37;
+  --dark-brown: #422c19;
+  --yellow: #b58628;
+}
+.navbar {
+  background: var(--white);
+  height: 80px px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+#navbar__logo {
+  background-color: var(--blue);
+  background-image: linear-gradient(to top, var(--white) 0%, var(--brown) 100%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+.navbar__item {
+  height: 80px;
+}
+.navbar__links {
+  color: var(--dark-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1.5rem;
+  height: 100%;
 }
 
-#AboutMe {
-    padding: 5px;
-
-    display: flex;
-
+.navbar__btn {
+}
+.button {
+  display: flex;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background: var(--yellow);
+  color: var(--white);
+  transition: all 1s, ease-in 0.5s;
+}
+.button:hover {
+  background-color: var(--brown);
+  transition: all 2s, ease-in 1s;
+}
+.navbar__links {
+  border-radius: 4px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: var(--brown);
+  transition: all 0.5s, ease-in 0.5s;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 10px, 5px;
+}
+.navbar__links:hover {
+  background-color: var(--grey);
+  transition: all 0.5s, ease-in 0.5s;
 }
 
-h1 {
-    padding-left: 10pt;
-    font-size: 40px;
-}
-
-h1 a:link {
-    color: var(--white);
-
-}
-
-h1 a:visited {
-    color: var(--white);
-}
-
-#topnav {
-    height: 80px;
-    position: sticky;
-    top: 0;
-    background-color: var(--brown);
+@media screen and (max-width: 900px) {
+  .navbar__container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    color: var(--white);
-
-
-
-    ul {
-        font-size: 20px;
-        list-style: none;
-        margin: 0;
-        padding-right: 10pt;
-    }
-
-    ul li {
-        float: right;
-        padding-left: 15px;
-    }
-
-}
-
-a {
-    text-decoration: none;
-}
-
-a:link {
-    color: var(--yellow);
-}
-
-a:visited {
-    color: var(--yellow);
-}
-
-a:hover {
-    color: var(--white);
-}
-
-
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
+    height: 80px;
+    width: 100%;
+    padding: 0;
+    z-index: 1;
+  }
+  .navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    height: 50vh;
+    z-index: -1;
+  }
+  .navbar__menu.active{
+    background: var(--blue);
+    top:100%;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 50vh;
+    font-size: 1.6rem;
+  }
 }
