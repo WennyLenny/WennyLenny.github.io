@@ -16,6 +16,7 @@
   --dark-brown: #422c19;
   --yellow: #cc962b;
 }
+/*-------------NAV BAR--------------*/
 .navbar {
   height: 80px;
   background-color: var(--dark-brown);
@@ -36,6 +37,18 @@
 }
 .navbar_title {
   border: 5px solid var(--dark-brown);
+  background-color: var(--white);
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 8px 15px;
+  margin-left: 1rem;
+  color: var(--dark-brown);
+  transition: all 1s;
+}
+.navbar_title:hover {
+  transition: all 0.5s;
+  border: 5px solid var(--yellow);
   background-color: var(--white);
   border-radius: 20px;
   text-decoration: none;
@@ -78,17 +91,16 @@
   width: auto;
   max-width: 1800px;
 }
+
+/*-------------LEFT SIDE--------------*/
 .leftside {
   margin: auto 0.5rem;
   display: flex;
   width: 30%;
   max-width: 400px;
 }
-.rightside {
-  display: flex;
-  width: 60%;
-  background-color: #b58628;
-}
+/*-------------ABOUT ME--------------*/
+
 .aboutme {
   background-color: var(--brown);
   border-radius: 30px;
@@ -125,13 +137,13 @@
 }
 .aboutme_education {
   display: flex;
-  align-items: left;
   justify-content: space-evenly;
-  margin: 1rem auto;
+  margin: 1rem 0.5rem;
 }
 
 .school {
-  margin: auto 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   background-color: var(--white);
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -143,6 +155,34 @@
     color: var(--yellow);
   }
 }
+
+.ContactMe {
+  text-decoration: none;
+  .aboutme_message {
+    background-color: var(--yellow);
+    margin: 1rem;
+    font-size: large;
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border: 5px solid var(--white);
+    transition: all 1s;
+
+    .material-icons {
+      padding-right: 0.5rem;
+      font-size: 1.5rem;
+      color: var(--white);
+    }
+  }
+}
+.ContactMe:hover {
+  .aboutme_message {
+    background-color: var(--dark-brown);
+    transition: all 0.5s;
+  }
+}
 .headshot {
   width: 85%;
   text-align: center;
@@ -152,6 +192,21 @@
   border-radius: 40px;
   display: block;
 }
-.firstbox {
+
+/*-------------RIGHT SIDE--------------*/
+.rightside {
   display: flex;
+  width: 70%;
+}
+/*-------------First Box--------------*/
+
+.firstbox {
+  background-color: #b58628;
+border-radius: 20px;
+padding: 1rem 1rem;
+  .h1 {
+  }
+  .h4{
+
+  }
 }
