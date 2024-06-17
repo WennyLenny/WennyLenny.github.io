@@ -18,12 +18,6 @@
 }
 .navbar {
   height: 80px;
-  background-image: linear-gradient(
-    to top,
-    var(--yellow) -200%,
-    var(--dark-brown) 100%
-  );
-
   background-color: var(--dark-brown);
   display: flex;
   z-index: 999;
@@ -41,11 +35,13 @@
   width: 100%;
 }
 .navbar_title {
+  border: 5px solid var(--dark-brown);
   background-color: var(--white);
   border-radius: 20px;
   text-decoration: none;
   font-size: 2rem;
   padding: 8px 15px;
+  margin-left: 1rem;
   color: var(--dark-brown);
 }
 .navbar_choices {
@@ -98,18 +94,54 @@
   border-radius: 30px;
   position: relative;
 }
-.aboutme_title {
+.aboutme_name {
   background-color: var(--white);
   margin: 1rem;
   font-size: x-large;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+
+  .material-icons {
+    font-size: 2rem;
+    color: var(--yellow);
+  }
 }
-.aboutme_blurb{
+
+.aboutme_major {
   background-color: var(--white);
   margin: 1rem;
-  padding: .5rem 1rem;
+  font-size: large;
+
+  padding: 0.5rem 1rem;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  .material-icons {
+    font-size: 2rem;
+    color: var(--yellow);
+  }
+}
+.aboutme_education {
+  display: flex;
+  align-items: left;
+  justify-content: space-evenly;
+  margin: 1rem auto;
+}
+
+.school {
+  margin: auto 1rem;
+  background-color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  .material-icons {
+    padding-right: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--yellow);
+  }
 }
 .headshot {
   width: 85%;
